@@ -1,0 +1,65 @@
+<ion-header no-border>
+  <ion-title style="background-color:#4c95d6;" padding>
+    <span style="color: white;">
+      Home
+    </span>
+  </ion-title>
+</ion-header>
+
+<ion-content>
+<ion-list *ngFor="let item of employees" >
+  <ion-item
+    style="border-style: solid;border-block-end-width: 20px; border-color: #f1f1f1;border-top-width: 5px;border-left-width: 5px;border-right-width: 5px">
+    <ion-grid no-padding>
+      <ion-row no-padding>
+        <ion-col style="text-align:center;" col-3 no padding>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="../assets/imgs/person.jpg">
+            </ion-avatar>
+          </ion-item>
+          
+        </ion-col>
+        <ion-col col-4 no-padding style="padding-top:2%">
+          <ion-row>
+            <ion-col>
+              <ion-row>
+                <ion-col>
+                  {{item.name}}
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col style="padding-top:0%;" class="font">
+                  {{item.email}}
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col style="padding-top:0%;"class="font">
+                  {{item.mobile}}
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col style="text-align:center;" col-3 no padding>
+          <ion-item item-end style="position: relative;
+         
+          left: 108%;
+          font-size: 140%;">
+            <ion-icon ios="ios-trash" md="md-trash" (click)="delete(item.employee_id)"></ion-icon>
+          
+          </ion-item>
+          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-item>
+   </ion-list>
+   <ion-fab bottom right slot="fixed">
+    <button ion-fab (click)="add()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+  
+  </ion-content>

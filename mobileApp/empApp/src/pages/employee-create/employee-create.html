@@ -1,0 +1,78 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <span style="color:white;">
+          Employee Registration     
+      </span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-list no-lines>
+    <ion-row no-padding>
+     <ion-col no-padding>
+       <ion-item no-lines>
+         <ion-label stacked class ="label-text" color="label">
+      Employee Details
+      </ion-label>
+      </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col no-padding>
+        <ion-item no-lines>
+        <ion-input type="text"  placeholder="Employee Name" name="employeeName"[(ngModel)]="employeeName" >Employee Name|titlecase</ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+   
+          <ion-row no-padding>
+           <ion-col no-padding>
+             <ion-item no-lines>
+               <ion-label stacked class ="label-text" color="label">
+               Mobile Number
+            </ion-label>
+            </ion-item>
+            </ion-col>
+          </ion-row>
+     <ion-row no-padding>
+      <ion-col no-padding>
+        <ion-item no-lines>
+          <ion-input type="number"  name="mobileNumber" placeholder="Mobile-Number"[(ngModel)]="mobileNumber">Mobile Number</ion-input>
+          </ion-item>
+      </ion-col>     
+   </ion-row>
+
+
+   <ion-row no-padding>
+    <ion-col no-padding>
+      <ion-item no-lines>
+        <ion-label stacked class ="label-text" color="label">
+        Email
+     </ion-label>
+     </ion-item>
+     </ion-col>
+   </ion-row>
+<ion-row no-padding>
+<ion-col no-padding>
+ <ion-item no-lines>
+   <ion-input type="email"  name="email" placeholder="Email"[(ngModel)]="email">Email</ion-input>
+   </ion-item>
+</ion-col>     
+</ion-row>
+
+</ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons text-center>
+      <button type="submit" (click)="submit()" [disabled]="!employeeName || !mobileNumber || !email" ion-button icon-center>
+        Summit
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

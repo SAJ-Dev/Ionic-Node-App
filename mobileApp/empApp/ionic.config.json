@@ -1,0 +1,7 @@
+{
+  "name": "empApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
